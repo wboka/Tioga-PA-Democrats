@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import links from "../menus/navigation.json"
+import links from "../../data/menus.json"
 
 import Header from "./header"
 
@@ -24,18 +24,18 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="bg-blue-200">
       <Header siteTitle={data.site.siteMetadata.title} />
       <>
-        <main className="container mx-auto p-4">{children}</main>
-        <footer className="p-4 bg-teal-700 text-white text-center">
+        <main className="container mx-auto p-4 ">{children}</main>
+        <footer className="p-4 bg-democrat-blue-700 text-white text-center">
           <p className="uppercase">
             {links
               ? links.map(link => {
                   return link.showInFooter ? (
                     <div
                       key={link.url + link.text}
-                      className="block hover:bg-teal-900 text-center md:text-left md:inline-block hover:text-white md:rounded"
+                      className="block hover:bg-white text-center md:text-left md:inline-block hover:text-democrat-blue-700 md:rounded"
                     >
                       {link.isExternalLink ? (
                         <a
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
                           key={link.url + link.text}
                           target={link.shouldOpenInNewTab ? "_blank" : "_self"}
                           rel="noopener noreferrer"
-                          className="block text-white p-2 no-underline"
+                          className="block p-2 no-underline"
                         >
                           {link.text}
                         </a>
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
                           key={link.url + link.text}
                           target={link.shouldOpenInNewTab ? "_blank" : "_self"}
                           rel="noopener noreferrer"
-                          className="block text-white p-2 no-underline"
+                          className="block p-2 no-underline"
                         >
                           {link.text}
                         </Link>
@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
               href="https://www.bokasolutions.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block underline text-white hover:shadow-lg hover:bg-teal-200 hover:text-teal-900 hover:no-underline rounded"
+              className="inline-block underline text-white hover:shadow-lg hover:bg-blue-200 hover:text-blue-900 hover:no-underline rounded"
             >
               Wayne Boka, Web Developer
             </a>
@@ -82,14 +82,14 @@ const Layout = ({ children }) => {
           <p>
             <a
               href="/admin"
-              className="inline-block bg-teal-900 hover:shadow-lg hover:bg-teal-200 hover:text-teal-900 rounded p-2 m-2 shadow no-underline text-white"
+              className="inline-block bg-blue-900 hover:shadow-lg hover:bg-blue-200 hover:text-blue-900 rounded p-2 m-2 shadow no-underline text-white"
             >
               Enter Admin Dashboard
             </a>
           </p>
         </footer>
       </>
-    </>
+    </div>
   )
 }
 

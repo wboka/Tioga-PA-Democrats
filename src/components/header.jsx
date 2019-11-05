@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import links from "../menus/navigation.json"
+import links from "../../data/menus.json"
+import { FaFacebook, FaEnvelope, FaPhone, FaBars } from "react-icons/fa"
 
 class Header extends React.Component {
   constructor(props) {
@@ -21,69 +22,89 @@ class Header extends React.Component {
   }
 
   render() {
-    const { siteTitle } = this.props
-
     return (
       <header>
-        <nav className="flex items-center justify-between flex-wrap bg-teal-900">
-          <div className="flex items-center flex-shrink-0 mr-6 py-4 px-2">
-            <Link
-              to="/"
-              className="font-semibold text-xl tracking-tight text-white no-underline logo-font"
-            >
-              {siteTitle}
-            </Link>
+        <nav className="shadow-inner">
+          <div className="flex flex-wrap bg-democrat-blue-700 text-white">
+            <ul className="w-full sm:w-1/2 text-center sm:text-left">
+              <li className="block sm:inline-block p-2 hover:bg-white hover:text-democrat-blue-700">
+                <a className="p-2 rounded" href="tel:+15701234567">
+                  <FaPhone className="inline" /> Call Us
+                </a>
+              </li>
+              <li className="block sm:inline-block p-2 hover:bg-white hover:text-democrat-blue-700">
+                <a className="p-2 rounded" href="mailto:tiogadems@gmail.com">
+                  <FaEnvelope className="inline" /> Email Us
+                </a>
+              </li>
+            </ul>
+            <ul className="w-full sm:w-1/2 text-center sm:text-right">
+              <li className="block sm:inline-block p-2 hover:bg-white hover:text-democrat-blue-700			">
+                <a
+                  className="p-2 rounded"
+                  href="https://www.facebook.com/Tiogadems"
+                >
+                  <FaFacebook className="inline" /> Like Us on Facebook
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className="block md:hidden">
+        </nav>
+
+        <div className="flex flex-wrap p-2 sm:max-w-4xl mx-auto">
+					<div className="w-full sm:w-1/4">
+						<img
+							className="mx-auto"
+							src="/images/logo.png"
+							alt="Official Democrats Logo"
+						/>
+					</div>
+					<div className="w-full sm:w-3/4">
+						<h1 className="text-center text-democrat-blue-700">
+							<p>
+								Tioga County, Pa
+							</p>
+							<p>Democrats</p>
+						</h1>
+					</div>
+				</div>
+
+        <nav className="sticky top-0 bg-democrat-blue-700 text-white">
+          <div className="block sm:hidden">
             <button
-              className="flex items-center p-4 text-teal-200 border-purple-400 hover:text-white"
+              class="px-4 py-2 w-full text-center sm:mt-0"
               onClick={this.toggleMenu}
             >
-              <svg
-                className="fill-current h-6 w-6"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
+              <FaBars className="inline" /> Menu
             </button>
           </div>
-          <div
+          <ul
             className={
               (this.state.showMenu ? "block" : "hidden") +
-              " w-full flex-grow md:flex md:items-center md:w-auto uppercase"
+              " sm:p-2 w-full text-center sm:text-left sm:block"
             }
           >
-            <div className="text-sm md:flex-grow">
-              {links
-                ? links.map(link =>
-                    link.showInHeader ? (
-                      <div
-                        key={link.url + link.text}
-                        className="block hover:bg-teal-600 text-center md:text-left md:inline-block hover:text-white md:rounded"
-                      >
-                        {link.isExternalLink ? (
-                          <a
-                            href={link.url}
-                            className="block text-white p-2 no-underline"
-                          >
-                            {link.text}
-                          </a>
-                        ) : (
-                          <Link
-                            to={link.url}
-                            className="block text-white p-2 no-underline"
-                          >
-                            {link.text}
-                          </Link>
-                        )}
-                      </div>
-                    ) : null
-                  )
-                : null}
-            </div>
-          </div>
+            {links
+              ? links.map(link =>
+                  link.showInHeader ? (
+                    <li
+                      key={link.url + link.text}
+                      className="block hover:bg-white text-center sm:text-left sm:inline-block hover:text-democrat-blue-700 sm:rounded"
+                    >
+                      {link.isExternalLink ? (
+                        <a href={link.url} className="block p-2 no-underline">
+                          {link.text}
+                        </a>
+                      ) : (
+                        <Link to={link.url} className="block p-2 no-underline">
+                          {link.text}
+                        </Link>
+                      )}
+                    </li>
+                  ) : null
+                )
+              : null}
+          </ul>
         </nav>
       </header>
     )

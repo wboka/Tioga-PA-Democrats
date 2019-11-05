@@ -13,7 +13,7 @@ export default ({ data }) => {
       <SEO title={frontmatter.title ? frontmatter.title : ``} />
 
       <div className="flex flex-wrap">
-        <div className="w-full md:w-1/4 p-2">
+        <div className="w-full md:w-1/4 p-2 bg-red-700">
           <div
             dangerouslySetInnerHTML={{
               __html: markdown.toHTML(frontmatter.left_column),
