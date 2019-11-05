@@ -1,11 +1,6 @@
 ---
-page_type: Two Columns
-left_column: |-
-  ## Our Story
-
-  ## Our Causes
-
-  * Fill in later
+page_type: Blank
+left_column: ''
 right_column: |-
   # Welcome to Your New Website
 
@@ -13,9 +8,22 @@ right_column: |-
 images: []
 two_column_layout: 25/75
 content: |-
-  # Welcome to Your New Website
+  ## Our Story
 
-  Replace this content with your own copy.
+  ## Our Causes
+
+  * CIVIL RIGHTS
+  * QUALITY EDUCATION
+  * THE ENVIRONMENT
+  * FAIR TAXES
+  * HEALTH CARE
+  * JOBS AND THE ECONOMY
+  * OPEN GOVERNMENT
+  * NATIONAL SECURITY
+  * RETIREMENT SECURITY
+  * VOTING RIGHTS
+  * WOMEN'S RIGHTS
+  * WORKER RIGHTS
 title: Home
 description: ''
 show_title: false
