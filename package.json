@@ -1,9 +1,9 @@
 {
-  "name": "impact-cms",
+  "name": "tioga-pa-dems",
   "private": true,
-  "description": "A demo for using Impact CMS by Wayne Boka",
+  "description": "The Tioga County, PA Democrats website",
   "version": "0.1.0",
-  "author": "Wayne Boka <bokawayne+impactCMS@gmail.com>",
+  "author": "Wayne Boka <bokawayne+tiogadems@gmail.com>",
   "dependencies": {
     "date-fns": "^2.0.1",
     "gatsby": "^2.13.73",
@@ -46,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wboka/template-funeral-home-gatsby-forestry"
+    "url": "https://github.com/wboka/tioga-pa-democrats"
   },
   "bugs": {
-    "url": "https://github.com/wboka/template-funeral-home-gatsby-forestry/issues"
+    "url": "https://github.com/wboka/tioga-pa-democrats"
   }
 }
