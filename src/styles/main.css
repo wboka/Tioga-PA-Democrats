@@ -59,7 +59,8 @@ ul {
   @apply list-disc;
 }
 
-.clickable {
+.clickable,
+a:hover {
   cursor: pointer;
 }
 
