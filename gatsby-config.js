@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Impact CMS Demo`,
-    description: `A demo for using Impact CMS by Wayne Boka`,
+    title: `Tioga County, PA Democrats`,
+    description: `Home of Pennsylvania's Tioga County Democrats.`,
     author: `@wtboka`,
-    siteUrl: `https://impact.bokasolutions.com`,
+    siteUrl: `https://tiogadems.bokasolutions.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,11 +33,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Impact CMS Demo`,
-        short_name: `Impact CMS`,
+        name: `Tioga County, PA Democrats`,
+        short_name: `Tioga Dems`,
         start_url: `/`,
-        background_color: `#364f6b`,
-        theme_color: `#364f6b`,
+        background_color: `#2fabe1`,
+        theme_color: `#2fabe1`,
         display: `standalone`,
         icon: `static/images/logo.png`,
       },
@@ -110,7 +110,7 @@ module.exports = {
 						}
 						`,
             output: `/rss.xml`,
-            title: `Impact CMS's Demo RSS Feed`,
+            title: `Tioga Dems RSS Feed`,
           },
         ],
       },
