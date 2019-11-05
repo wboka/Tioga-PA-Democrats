@@ -31,5 +31,3 @@ fields:
     label: Is this an external link?
     description: External links are links to another website. Also included are links
       to sitemap.xml and rss.xml
-pages:
-- src/menus/navigation.json

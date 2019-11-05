@@ -117,5 +117,5 @@ fields:
     field: page_type
     value: Gallery
 pages:
-- src/cms/pages/about.md
 - src/cms/pages/home.md
+- src/cms/pages/about.md
