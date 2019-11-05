@@ -1,0 +1,35 @@
+---
+label: Menu Link
+hide_body: true
+fields:
+- type: field_group_list
+  name: Navigation
+  label: Navigation
+  fields:
+  - type: text
+    name: text
+    label: Text
+    description: Content to display to your users
+  - type: text
+    name: url
+    label: URL
+    description: Page URL (e.g. /, /about, /help)
+  - type: boolean
+    name: shouldOpenInNewTab
+    label: Should open in new tab?
+    description: Open this link in a new tab/window
+  - type: boolean
+    name: showInHeader
+    label: Show link in the top menu?
+    description: Display this link in the top menu
+  - type: boolean
+    name: showInFooter
+    label: Show link in the footer menu?
+    description: Display this link in the footer menu
+  - type: boolean
+    name: isExternalLink
+    label: Is this an external link?
+    description: External links are links to another website. Also included are links
+      to sitemap.xml and rss.xml
+pages:
+- src/menus/navigation.json

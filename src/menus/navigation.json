@@ -1,0 +1,82 @@
+[
+  {
+    "text": "Home",
+    "url": "/",
+    "shouldOpenInNewTab": false,
+    "showInHeader": true,
+    "showInFooter": false,
+    "isExternalLink": false
+  },
+  {
+    "text": "About",
+    "url": "/about",
+    "shouldOpenInNewTab": false,
+    "showInHeader": true,
+    "showInFooter": false,
+    "isExternalLink": false
+  },
+  {
+    "text": "Media",
+    "url": "/media",
+    "shouldOpenInNewTab": false,
+    "showInHeader": true,
+    "showInFooter": false,
+    "isExternalLink": false
+  },
+  {
+    "text": "Sitemap",
+    "url": "/sitemap.xml",
+    "shouldOpenInNewTab": false,
+    "showInHeader": true,
+    "showInFooter": false,
+    "isExternalLink": true
+  },
+  {
+    "text": "RSS",
+    "url": "/rss.xml",
+    "shouldOpenInNewTab": false,
+    "showInHeader": true,
+    "showInFooter": false,
+    "isExternalLink": true
+  },
+  {
+    "text": "Columns (50/50)",
+    "url": "/two-columns-50-50",
+    "shouldOpenInNewTab": false,
+    "showInHeader": false,
+    "showInFooter": true,
+    "isExternalLink": false
+  },
+  {
+    "text": "Columns (25/75)",
+    "url": "/two-columns-25-75",
+    "shouldOpenInNewTab": false,
+    "showInHeader": false,
+    "showInFooter": true,
+    "isExternalLink": false
+  },
+  {
+    "text": "Columns (75/25)",
+    "url": "/two-columns-75-25",
+    "shouldOpenInNewTab": false,
+    "showInHeader": false,
+    "showInFooter": true,
+    "isExternalLink": false
+  },
+  {
+    "text": "Columns (33/67)",
+    "url": "/two-columns-33-67",
+    "shouldOpenInNewTab": false,
+    "showInHeader": false,
+    "showInFooter": true,
+    "isExternalLink": false
+  },
+  {
+    "text": "Columns (67/33)",
+    "url": "/two-columns-67-33",
+    "shouldOpenInNewTab": false,
+    "showInHeader": false,
+    "showInFooter": true,
+    "isExternalLink": false
+  }
+]

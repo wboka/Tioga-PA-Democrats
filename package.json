@@ -1,0 +1,54 @@
+{
+  "name": "impact-cms",
+  "private": true,
+  "description": "A demo for using Impact CMS by Wayne Boka",
+  "version": "0.1.0",
+  "author": "Wayne Boka <bokawayne+impactCMS@gmail.com>",
+  "dependencies": {
+    "date-fns": "^2.0.1",
+    "gatsby": "^2.13.73",
+    "gatsby-image": "^2.2.10",
+    "gatsby-plugin-advanced-sitemap": "^1.4.1",
+    "gatsby-plugin-feed": "^2.3.9",
+    "gatsby-plugin-manifest": "^2.2.6",
+    "gatsby-plugin-offline": "^2.2.7",
+    "gatsby-plugin-postcss": "^2.1.5",
+    "gatsby-plugin-react-helmet": "^3.1.4",
+    "gatsby-plugin-sharp": "^2.2.13",
+    "gatsby-remark-images": "^3.1.19",
+    "gatsby-source-filesystem": "^2.1.11",
+    "gatsby-transformer-remark": "^2.6.19",
+    "gatsby-transformer-sharp": "^2.2.7",
+    "markdown": "^0.5.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "sweetalert2": "^8.17.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "tailwindcss": "^1.1.2"
+  },
+  "keywords": [
+    "gatsby",
+    "sample",
+    "funeral"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,css}\"",
+    "start": "yarn develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wboka/template-funeral-home-gatsby-forestry"
+  },
+  "bugs": {
+    "url": "https://github.com/wboka/template-funeral-home-gatsby-forestry/issues"
+  }
+}
