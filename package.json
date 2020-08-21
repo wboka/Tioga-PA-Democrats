@@ -1,55 +1,42 @@
 {
-  "name": "tioga-pa-dems",
+  "name": "tioga-pa-democrats",
+  "version": "1.0.0",
   "private": true,
-  "description": "The Tioga County, PA Democrats website",
-  "version": "0.1.0",
-  "author": "Wayne Boka <bokawayne+tiogadems@gmail.com>",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "test": "jest"
+  },
   "dependencies": {
-    "date-fns": "^2.0.1",
-    "gatsby": "^2.13.73",
-    "gatsby-image": "^2.2.10",
-    "gatsby-plugin-advanced-sitemap": "^1.4.1",
-    "gatsby-plugin-feed": "^2.3.9",
-    "gatsby-plugin-manifest": "^2.2.6",
-    "gatsby-plugin-offline": "^2.2.7",
-    "gatsby-plugin-postcss": "^2.1.5",
-    "gatsby-plugin-react-helmet": "^3.1.4",
-    "gatsby-plugin-sharp": "^2.2.13",
-    "gatsby-remark-images": "^3.1.19",
-    "gatsby-source-filesystem": "^2.1.11",
-    "gatsby-transformer-remark": "^2.6.19",
-    "gatsby-transformer-sharp": "^2.2.7",
-    "markdown": "^0.5.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1",
-    "react-icons": "^3.8.0",
-    "sweetalert2": "^8.17.1"
+    "@nuxt/content": "^1.3.2",
+    "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
+    "nuxt": "^2.13.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "tailwindcss": "^1.1.2"
-  },
-  "keywords": [
-    "gatsby",
-    "sample",
-    "funeral"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,css}\"",
-    "start": "yarn develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wboka/tioga-pa-democrats"
-  },
-  "bugs": {
-    "url": "https://github.com/wboka/tioga-pa-democrats"
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.0.1",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^9.0.3",
+    "vue-jest": "^3.0.4"
   }
 }
