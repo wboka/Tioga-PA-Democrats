@@ -1,30 +1,7 @@
 <template lang="pug">
   div
     .row
-      .col-3
-        svg.democrat-logo.d-block.mx-auto(
-          xmlns="http://www.w3.org/2000/svg",
-          viewBox="0 0 86 86"
-        )
-          title Democratic party logo
-          circle(
-            cx=43,
-            cy=43,
-            r=37.5,
-            stroke="#00aff3",
-            stroke-width=11,
-            fill="#ffffff"
-          )
-          path(
-            d="M28.5,25.5v35h16.5a17.5,17.5 0 0,0 0,-35zM38.5,34h5a9,9 0 0,1 0,18h-5z",
-            fill="#00aff3"
-          )
-      .col-6.text-center
-        h1 Tioga County, Pa
-
-        h2 Democrats
-
-      .col-3
+      .col-5.col-sm-4
         svg.us-flag.d-block.mx-auto(
           xmlns="http://www.w3.org/2000/svg",
           xmlns:xlink="http://www.w3.org/1999/xlink",
@@ -55,6 +32,30 @@
             use(xlink:href="#s9", x="1976")
             use(xlink:href="#s5", x="2470")
 
+      .col-4.text-center
+        h1 Tioga County, Pa
+
+        h2 Democrats
+
+      .col-3.col-sm-4
+        svg.democrat-logo.d-block.mx-auto(
+          xmlns="http://www.w3.org/2000/svg",
+          viewBox="0 0 86 86"
+        )
+          title Democratic party logo
+          circle(
+            cx=43,
+            cy=43,
+            r=37.5,
+            stroke="#00aff3",
+            stroke-width=11,
+            fill="#ffffff"
+          )
+          path(
+            d="M28.5,25.5v35h16.5a17.5,17.5 0 0,0 0,-35zM38.5,34h5a9,9 0 0,1 0,18h-5z",
+            fill="#00aff3"
+          )
+
     nav.navbar.navbar-dark.navbar-expand-sm.bg-democrat-blue
       a.navbar-brand(href="#") Tioga Dems
       button.navbar-toggler(
@@ -71,3 +72,12 @@
           li.nav-item
             a.nav-link(href="#") Home
 </template>
+
+<style lang="sass" scoped>
+svg
+  max-width: 250px
+  width: 100%
+
+.democrat-logo
+  max-width: 150px
+</style>
