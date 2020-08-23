@@ -1,7 +1,7 @@
 <template lang="pug">
   div
-    .row
-      .col-5.col-sm-4
+    .flex.flex-wrap
+      div(class="w-1/2 sm:w-1/4")
         svg.us-flag.d-block.mx-auto(
           xmlns="http://www.w3.org/2000/svg",
           xmlns:xlink="http://www.w3.org/1999/xlink",
@@ -32,12 +32,12 @@
             use(xlink:href="#s9", x="1976")
             use(xlink:href="#s5", x="2470")
 
-      .col-4.text-center
+      div(class="hidden sm:block w-full sm:w-2/4 text-center")
         h1 Tioga County, Pa
 
         h2 Democrats
 
-      .col-3.col-sm-4
+      div(class="w-1/2 sm:w-1/4")
         svg.democrat-logo.d-block.mx-auto(
           xmlns="http://www.w3.org/2000/svg",
           viewBox="0 0 86 86"
@@ -56,21 +56,25 @@
             fill="#00aff3"
           )
 
-    nav.navbar.navbar-dark.navbar-expand-sm.bg-democrat-blue
-      a.navbar-brand(href="#") Tioga Dems
-      button.navbar-toggler(
-        type="button",
-        data-toggle="collapse",
-        data-target="#navbar-top",
-        aria-controls="navbar-top",
-        aria-expanded="false",
-        aria-label="Toggle navigation"
-      )
-        span#navbar-top.navbar-toggler-icon
-      .collapse.navbar-collapse
-        ul.navbar-nav
-          li.nav-item
-            a.nav-link(href="#") Home
+    nav.flex.items-center.justify-between.flex-wrap.bg-democrat-blue.p-3.my-3
+      .flex.items-center.flex-shrink-0.text-white.mr-6
+        nuxt-link.font-semibold.text-xl.tracking-tight(to="/") Tioga Dems
+
+      div(class="block lg:hidden")
+        button(class="flex items-center px-3 py-2 text-white" @click="toggleMenu")
+          svg(class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg")
+            title Menu
+            path(d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z")
+
+      #menu-items(class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" :class="{ hidden: !showMenu, block: showMenu }")
+        div(class="text-sm lg:flex-grow")
+          nuxt-link(to="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Home
+          nuxt-link(to="/news" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") News
+          nuxt-link(to="/our-candidates" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Our Candidates
+          nuxt-link(to="/platform" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Platform
+          a(href="mailto:tiogadems@gmail.com" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Contact Us
+          nuxt-link(to="/links" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Important Links
+          nuxt-link(to="/events" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Events
 </template>
 
 <style lang="sass" scoped>
@@ -81,3 +85,18 @@ svg
 .democrat-logo
   max-width: 150px
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu
+    },
+  },
+}
+</script>
