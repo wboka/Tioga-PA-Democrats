@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     .flex.flex-wrap
-      div(class="w-1/2 sm:w-1/4")
+      div(class="w-1/2 sm:w-1/4 p-2")
         svg.us-flag.d-block.mx-auto(
           xmlns="http://www.w3.org/2000/svg",
           xmlns:xlink="http://www.w3.org/1999/xlink",
@@ -37,7 +37,7 @@
 
         h2 Democrats
 
-      div(class="w-1/2 sm:w-1/4")
+      div(class="w-1/2 sm:w-1/4 p-2")
         svg.democrat-logo.d-block.mx-auto(
           xmlns="http://www.w3.org/2000/svg",
           viewBox="0 0 86 86"
