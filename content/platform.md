@@ -15,5 +15,5 @@ description: 'Our current platform for the Democratic Party of Tioga County, Pa.
 - National Security
 - Retirement Security
 - Voting Rights
-- Women'S Rights
+- Women's Rights
 - Worker Rights
