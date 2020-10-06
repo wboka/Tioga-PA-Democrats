@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    .flex.flex-wrap
+    .flex.flex-wrap.hero
       div(class="w-1/2 sm:w-1/4 p-2")
         svg.us-flag.d-block.mx-auto(
           xmlns="http://www.w3.org/2000/svg",
@@ -82,9 +82,10 @@
 </template>
 
 <style lang="sass" scoped>
-svg
-  max-width: 250px
-  width: 100%
+.hero
+  svg
+    max-width: 250px
+    width: 100%
 
 .democrat-logo
   max-width: 150px
