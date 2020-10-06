@@ -68,13 +68,13 @@
 
       #menu-items(class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" :class="{ hidden: !showMenu, block: showMenu }")
         div(class="text-sm lg:flex-grow")
-          nuxt-link(to="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Home
-          nuxt-link(to="/news" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") News
-          nuxt-link(to="/our-candidates" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Our Candidates
-          nuxt-link(to="/platform" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Platform
-          a(href="mailto:tiogadems@gmail.com" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Contact Us
-          nuxt-link(to="/links" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Links
-          nuxt-link(to="/events" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4") Events
+          nuxt-link(to="/" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Home
+          nuxt-link(to="/news" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") News
+          nuxt-link(to="/our-candidates" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Our Candidates
+          nuxt-link(to="/platform" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Platform
+          a(href="mailto:tiogadems@gmail.com" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Contact Us
+          nuxt-link(to="/links" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Links
+          nuxt-link(to="/events" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Events
 </template>
 
 <style lang="sass" scoped>

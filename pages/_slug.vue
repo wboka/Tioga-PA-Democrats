@@ -3,24 +3,24 @@
     <nuxt-content v-if="page.extension === '.md'" :document="page" />
 
     <div v-if="page.extension !== '.md'">
-      <h2>Important Links</h2>
-
-      <p class="text-2xl text-gray-600">
-        Here are some links we think you may find helpful.
-      </p>
-
-      <hr />
-
       <ul v-if="page.slug === 'links'">
+        <h2>Important Links</h2>
+
+        <p class="text-2xl text-gray-600">
+          Here are some links we think you may find helpful.
+        </p>
+
+        <hr />
+
         <li v-for="(link, i) in page.body" :key="`link-${i}`">
           <a
+            v-if="link.external"
             :href="link.url"
             target="_blank"
             rel="noopener"
-            v-if="link.external"
             >{{ link.text }}</a
           >
-          <nuxt-link :to="link.url" v-else>{{ link.text }}</nuxt-link>
+          <nuxt-link v-else :to="link.url">{{ link.text }}</nuxt-link>
         </li>
       </ul>
 
@@ -32,6 +32,14 @@
       </p>
 
       <ul v-if="page.slug === 'events'">
+        <h2>Upcoming Events</h2>
+
+        <p class="text-2xl text-gray-600">
+          Come join us out and about the county.
+        </p>
+
+        <hr />
+
         <li v-for="(event, i) in page.body" :key="`event-${i}`">
           <h3>{{ event.date }}</h3>
           <p class="text-xl text-gray-600">
@@ -57,7 +65,6 @@
 <script>
 export default {
   async asyncData({ $content, params, error }) {
-    console.log(params)
     const page = await $content(params.slug)
       .fetch()
       .catch(() => {
