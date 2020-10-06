@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     Header
-    div.content.p-6
+    div.content
       Nuxt
 </template>
 
