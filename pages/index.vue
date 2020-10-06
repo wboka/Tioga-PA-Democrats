@@ -11,7 +11,7 @@
       | (Night and Day in Mansfield &amp; Online via Zoom)
 
     p
-      a(href="mailto:tiogadems@gmail.com") Contact us for the meeting code
+      a(href="mailto:tiogadems@gmail.com?subject=Meeting%20Code,%20Please") Contact us for the meeting code
 
     h2 Important Dates
 
