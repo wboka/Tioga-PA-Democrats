@@ -62,12 +62,16 @@
 
       div(class="block lg:hidden")
         button(class="flex items-center px-3 py-2 text-white" @click="toggleMenu")
-          svg(class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg")
+          svg(class="h-6 w-6" :class="{ block: !showMenu, hidden: showMenu }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
             title Menu
-            path(d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z")
+            path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16")
+
+          svg(class="h-6 w-6" :class="{ block: showMenu, hidden: !showMenu }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
+            path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12")
+
 
       #menu-items(class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" :class="{ hidden: !showMenu, block: showMenu }")
-        div(class="text-sm lg:flex-grow")
+        div(class="text-center lg:text-right text-sm lg:flex-grow")
           nuxt-link(to="/" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Home
           nuxt-link(to="/news" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") News
           nuxt-link(to="/our-candidates" class="block mt-2 lg:inline-block lg:mt-0 text-white hover:text-white lg:mr-4") Our Candidates
@@ -92,6 +96,11 @@ export default {
     return {
       showMenu: false,
     }
+  },
+  watch: {
+    $route() {
+      this.showMenu = false
+    },
   },
   methods: {
     toggleMenu() {
