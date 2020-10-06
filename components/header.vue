@@ -87,8 +87,11 @@
     max-width: 250px
     width: 100%
 
-.democrat-logo
-  max-width: 150px
+  .democrat-logo
+    max-width: 125px
+
+.us-flag
+  // @apply .transform .translate-y-1/2
 </style>
 
 <script>
