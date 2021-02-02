@@ -9,15 +9,27 @@
             h2.font-light.tracking-tight {{ post.title }}
 
             p.text-xl.text-gray-700 {{ post.description }}
+
+            p.italic Published on {{ format(new Date(post.datePublished), 'MMMM dd, yyyy') }}
 </template>
 
 <script>
+import { format } from 'date-fns'
+
 export default {
   name: 'News',
   async asyncData({ $content }) {
-    const news = await $content('news').where({ draft: false }).fetch()
+    const news = await $content('news')
+      .where({ draft: false })
+      .sortBy('datePublished', 'desc')
+      .fetch()
     return {
       news,
+    }
+  },
+  data() {
+    return {
+      format,
     }
   },
 }

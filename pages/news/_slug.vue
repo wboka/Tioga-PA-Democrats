@@ -1,9 +1,12 @@
 <template lang="pug">
   article
     nuxt-content(:document="page")
+
+    p.italic Published on {{ format(new Date(page.datePublished), 'MMMM dd, yyyy') }}
 </template>
 
 <script>
+import { format } from 'date-fns'
 import socialMedia from '~/helpers/social-tags'
 
 export default {
@@ -17,6 +20,11 @@ export default {
 
     return {
       page,
+    }
+  },
+  data() {
+    return {
+      format,
     }
   },
   head() {
