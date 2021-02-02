@@ -33,9 +33,9 @@
             use(xlink:href="#s5", x="2470")
 
       div(class="hidden sm:block w-full sm:w-2/4 text-center")
-        h1 Tioga County, Pa
+        h1.m-0 Tioga County, Pa
 
-        h2 Democrats
+        h2.m-0 Democrats
 
       div(class="w-1/2 sm:w-1/4 p-2")
         svg.democrat-logo.d-block.mx-auto(
@@ -58,7 +58,7 @@
 
     nav.flex.items-center.justify-between.flex-wrap.bg-democrat-blue.p-3.my-3
       .flex.items-center.flex-shrink-0.text-white.mr-6
-        nuxt-link.font-semibold.text-xl.tracking-tight(to="/") Tioga Dems
+        nuxt-link.font-light.text-xl.tracking-tight(to="/") Tioga Democrats
 
       div(class="block lg:hidden")
         button(class="flex items-center px-3 py-2 text-white" @click="toggleMenu")

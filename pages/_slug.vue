@@ -63,7 +63,10 @@
 </template>
 
 <script>
+import socialMedia from '~/helpers/social-tags'
+
 export default {
+  name: 'Page',
   async asyncData({ $content, params, error }) {
     const page = await $content(params.slug)
       .fetch()
@@ -73,6 +76,21 @@ export default {
 
     return {
       page,
+    }
+  },
+  head() {
+    const options = {
+      url: 'https://tiogadems.vercel.app',
+      title: this.page.title,
+      site_name: 'Democrats of Tioga County, Pa',
+      description: this.page.description,
+      locale: 'en_US',
+      themeColor: '#3c3b6e',
+    }
+    return {
+      title: this.page.title,
+      description: this.page.description,
+      meta: socialMedia(options),
     }
   },
 }
