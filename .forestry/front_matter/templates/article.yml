@@ -11,6 +11,8 @@ fields:
 - type: datetime
   name: datePublished
   label: datePublished
+  config:
+    export_format: X
 - type: boolean
   name: draft
   label: draft
