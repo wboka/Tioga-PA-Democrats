@@ -4,13 +4,14 @@
 
     ul.list-none.ml-0
       li(v-for="(post, i) in news" :key="`post-${i}`")
-        .p-3.mb-6.shadow-md.rounded.bg-blue-200
+        .mb-6.shadow-md.rounded.bg-blue-200
           nuxt-link(:to="`/news/${post.slug}`")
-            h2.font-light.tracking-tight {{ post.title }}
+            .p-3
+              h2.font-light.tracking-tight {{ post.title }}
 
-            p.text-xl.text-gray-700 {{ post.description }}
+              p.text-xl.text-gray-700 {{ post.description }}
 
-            p.italic Published on {{ format(new Date(post.datePublished), 'MMMM dd, yyyy') }}
+              p.italic Published on {{ format(new Date(post.datePublished), 'MMMM dd, yyyy') }}
 </template>
 
 <script>
