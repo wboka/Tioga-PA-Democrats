@@ -1,0 +1,16 @@
+---
+label: Article
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: datetime
+  name: datePublished
+  label: datePublished
+- type: boolean
+  name: draft
+  label: draft
