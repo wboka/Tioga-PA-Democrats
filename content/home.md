@@ -11,8 +11,8 @@ description: The latest from members of Tioga County, Pa's Democratic Party.
 | --- | --- |
 | ~~February 16, 2021~~ | ~~First day to circulate and file nomination petitions~~ |
 | ~~March 9, 2021~~ | ~~Last day to circulate and file nomination petitions~~ |
-| March 10, 2021 | First day to circulate and file nomination papers |
-| March 16, 2021 | Last day to file objections to nomination petitions |
+| ~~March 10, 2021~~ | ~~First day to circulate and file nomination papers~~ |
+| ~~March 16, 2021~~ | ~~Last day to file objections to nomination petitions~~ |
 | March 24, 2021 | Last day for withdrawal by candidates who filed nomination petitions |
 | May 3, 2021 | Last day to REGISTER before the primary |
 | May 11, 2021 | Last day to apply for a mail-in or civilian absentee ballot |
